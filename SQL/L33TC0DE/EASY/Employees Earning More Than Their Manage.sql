@@ -28,3 +28,6 @@ FROM Employee E LEFT JOIN mgmt M ON E.id = m.id
 -- Close but still wrong
 -- Need to look at soloution 
 
+SELECT B.name AS Employee 
+FROM Employee A JOIN Employee B
+ON A.id = b.managerId AND B.salary > A.salary
