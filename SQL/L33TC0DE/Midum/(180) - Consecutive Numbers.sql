@@ -15,6 +15,6 @@ SELECT DISTINCT L.num AS ConsecutiveNums
 FROM Logs L JOIN secCon S
 ON L.ID = S.ID AND L.num = S.numbs
 JOIN thirdCon T
-ON T.ID = S.ID AND S.numbs = T.numbs\
+ON T.ID = S.ID AND S.numbs = T.numbs
 
 -- LEAD will give you row below
