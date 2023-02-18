@@ -35,8 +35,22 @@ SET sex = CASE sex
         ELSE 'm'
     END; 
 
+-- 196. Delete Duplicate Emails
+----------------------------------------------------------------
 -- firtst need update statement 
 -- second need SET 
     -- must define the new column name and =
     -- CASE to select the condition
     -- WHEN to start its like if
+
+-- Write an SQL query to delete all the duplicate emails, 
+-- keeping only one unique email with the smallest id. Note that you are supposed to write a DELETE statement and not a SELECT one.
+
+-- After running your script, the answer shown is the Person table. 
+-- The driver will first compile and run your piece of code and then show the Person table. The final order of the Person table does not matter.
+
+DELETE t2
+FROM Person t1, Person t2
+WHERE t1.email = t2.email AND t1.id < t2.id
+
+-- Since the question asked to keep the smallest ID I am removing P2
