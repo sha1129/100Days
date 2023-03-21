@@ -20,6 +20,6 @@ FROM topTraders
 ORDER BY ranks
 LIMIT 3;
 
--- lessions learned 
+-- lessons learned 
     -- use limit at main query
     -- order them by ranks so I know I will get exact info
