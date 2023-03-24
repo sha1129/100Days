@@ -5,6 +5,8 @@
 -- Write a query to list the candidates who possess all of the required skills for the job. 
 -- Sort the output by candidate ID in ascending order.
 
+--LinkedIn SQL Interview Question
+
 SELECT candidate_id
 FROM candidates
 WHERE skill IN ('Python','Tableau','PostgreSQL')
