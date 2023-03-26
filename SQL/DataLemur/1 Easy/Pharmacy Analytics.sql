@@ -11,3 +11,18 @@ SELECT DISTINCT drug, total_sales-cogs AS total_profit
 FROM pharmacy_sales
 ORDER BY total_profit DESC
 limit 3;
+
+
+-- Solving using CTE 
+
+WITH topThree AS (
+
+  SELECT DISTINCT RANK() OVER(ORDER BY total_sales-cogs DESC) AS ranks, drug,  total_sales-cogs AS total_profit
+  FROM pharmacy_sales
+  ORDER BY total_profit DESC
+
+)
+
+SELECT drug, total_profit
+FROM topThree
+WHERE ranks < 4
